@@ -15,7 +15,7 @@
 #      is injected into the HTTPS URL below.
 #
 # Crontab line (see README.md):
-#   0 * * * * /path/to/OSM_QC_Fix_Tracker/run_and_commit.sh >> /path/to/OSM_QC_Fix_Tracker/data/cron.log 2>&1
+#   0 * * * * /path/to/MapCupAsia_OSM_QC_Fix_Tracker/run_and_commit.sh >> /path/to/MapCupAsia_OSM_QC_Fix_Tracker/data/cron.log 2>&1
 
 set -euo pipefail
 
@@ -44,8 +44,8 @@ REMOTE_URL="$(git config --get remote.origin.url)"
 # Rewrite https://github.com/OWNER/REPO.git -> https://x-access-token:TOKEN@github.com/OWNER/REPO.git
 AUTH_URL="$(echo "$REMOTE_URL" | sed -E "s#https://#https://x-access-token:${QCFIX_GH_PAT}@#")"
 
-git config user.name "osm-qc-fix-tracker-cron"
-git config user.email "osm-qc-fix-tracker-cron@localhost"
+git config user.name "MapCupAsia_OSM_QC_Fix_Tracker-cron"
+git config user.email "MapCupAsia_OSM_QC_Fix_Tracker-cron@localhost"
 
 git add data/
 git commit -m "Hourly fix-check run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
