@@ -1,7 +1,7 @@
 # OSM_QC_Fix_Tracker
 
 Tracks whether issues already identified by
-[`OSM_Quality_Check`](https://github.com/KingVik-Planet/OSM_Quality_Check)
+[`OSM_QC_MapCupAPAC2026`](https://github.com/KingVik-Planet/OSM_QC_MapCupAPAC2026)
 have since been fixed on OpenStreetMap.
 
 This repo is **read-only** with respect to `OSM_Quality_Check`: it never
@@ -139,7 +139,7 @@ own job configuration -- never into any file here. Full click-by-click
 setup: ask Claude, or see cron-job.org's job pointed at
 
 ```
-POST https://api.github.com/repos/KingVik-Planet/OSM_QC_Fix_Tracker.tt_event/actions/workflows/hourly.yml/dispatches
+POST https://api.github.com/repos/KingVik-Planet/OSM_QC_MapCupAPAC2026/actions/workflows/hourly.yml/dispatches
 Headers: Authorization: Bearer <PAT>, Accept: application/vnd.github+json, X-GitHub-Api-Version: 2022-11-28
 Body: {"ref":"master"}
 Schedule: every hour
