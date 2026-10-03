@@ -17,7 +17,7 @@ import config
 import db
 
 log = logging.getLogger(__name__)
-HEADERS = {"User-Agent": "MapCupAsia_OSM_QC_Fix_Trackerr/1.0"}
+HEADERS = {"User-Agent": "MapCupAsia_OSM_QC_Fix_Tracker/1.0"}
 
 
 def _fetch_csv_file(file_index):
