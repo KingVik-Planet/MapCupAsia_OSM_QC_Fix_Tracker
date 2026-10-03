@@ -13,7 +13,7 @@ import requests
 import config
 
 log = logging.getLogger(__name__)
-HEADERS = {"User-Agent": "osm-qc-fix-tracker/1.0"}
+HEADERS = {"User-Agent": "MapCupAsia_OSM_QC_Fix_Tracker/1.0"}
 
 
 class OverpassUnavailable(Exception):
