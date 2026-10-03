@@ -13,7 +13,7 @@ import os
 # (see SOURCE_REPO_RAW_BASE below), so this is fixed per deployment --
 # used to label every row with which campaign it belongs to, and as the
 # fallback value for any row ingested before that column existed.
-HASHTAG = os.getenv("QCFIX_HASHTAG", "tt_event")  # without the leading '#'
+HASHTAG = os.getenv("QCFIX_HASHTAG", "MapCupAPAC2026")  # without the leading '#'
 
 # --- Where the issues come from ---------------------------------------------
 # The upstream repo that runs OSM_Quality_Check and commits its rotating
@@ -21,7 +21,7 @@ HASHTAG = os.getenv("QCFIX_HASHTAG", "tt_event")  # without the leading '#'
 # never writes to it -- only reads the raw CSVs over plain HTTP.
 SOURCE_REPO_RAW_BASE = os.getenv(
     "QCFIX_SOURCE_RAW_BASE",
-    "https://raw.githubusercontent.com/KingVik-Planet/OSM_Quality_Check/master/data",
+    "https://raw.githubusercontent.com/KingVik-Planet/OSM_QC_MapCupAPAC2026/master/data",
 )
 SOURCE_CSV_BASENAME = os.getenv("QCFIX_SOURCE_CSV_BASENAME", "quality_check")
 # How many quality_check_N.csv files to probe for on every ingest run.
